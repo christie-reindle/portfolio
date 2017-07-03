@@ -16,7 +16,7 @@ header {
     font-size: 2.5em;
     letter-spacing: .2em;
     color: white;
-    background-color: black;
+    /*background-color: black;*/
     padding: 10rem 0;
     mix-blend-mode: screen;
 }
@@ -36,7 +36,8 @@ header {
     background-color: white;
 }
 .parallax:nth-of-type(1) {
-    background: url(https://github.com/creindle/testing-1/blob/master/assets/image1.png?raw=true);
+    /*background: url(https://github.com/creindle/testing-1/blob/master/assets/image1.png?raw=true);*/
+    background: url(/assets/image1.png);
     background-color: black;
 }
 .parallax:nth-of-type(1) pre {
@@ -44,11 +45,13 @@ header {
     text-align: center;
 }
 .parallax:nth-of-type(2) {
-    background: url(https://github.com/creindle/testing-1/blob/master/assets/taurus-reverse.png?raw=true);
+    /*background: url(https://github.com/creindle/testing-1/blob/master/assets/taurus-reverse.png?raw=true);*/
+    background: url(/assets/taurus-reverse.png);
     background-color: #2E4053;
 }
 .parallax:nth-of-type(3) {
-    background: url(https://github.com/creindle/testing-1/blob/master/assets/parallax-3-leo.png?raw=true);
+    /*background: url(https://github.com/creindle/testing-1/blob/master/assets/parallax-3-leo.png?raw=true);*/
+    background: url(/assets/parallax-3-leo.png);
     background-color: black;
 }
 
@@ -59,7 +62,8 @@ header {
 }
 
 .parallax:nth-of-type(4) {
-    background: url(https://github.com/creindle/testing-1/blob/master/assets/parallax-4.png?raw=true);
+    /*background: url(https://github.com/creindle/testing-1/blob/master/assets/parallax-4.png?raw=true);*/
+    background: url(/assets/parallax-4.png);
     background-color: #2E4053;
 }
 
