@@ -22,6 +22,7 @@ header {
 }
 .parallax pre{
   background-color: white;
+  white-space:pre-wrap;
   color: black;
   width: 100%;
   margin: auto;
