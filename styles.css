@@ -46,9 +46,6 @@ header {
     background: url(https://github.com/creindle/testing-1/blob/master/assets/taurus-reverse.png?raw=true);
     background-color: #2E4053;
 }
-.parallax:nth-of-type(2) h1 {
-    /*padding: 12rem 0;*/
-}
 .parallax:nth-of-type(3) {
     background: url(https://github.com/creindle/testing-1/blob/master/assets/parallax-3-leo.png?raw=true);
     background-color: black;
@@ -391,7 +388,11 @@ a {
 
 /* RESPONSIVE */
 
-@media (min-width: 1px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .parallax pre{
+    font-size: 10px;
+    padding: 5px;
+  }
     .textOverImage{
       font-size: 12px;
       height: 60%;
@@ -432,7 +433,6 @@ a {
   color: white;
 }
 
-
 .main_h {
   position: fixed;
   top: 0px;
@@ -450,6 +450,10 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   .main_h {
     padding-top: 25px;
   }
@@ -484,6 +488,10 @@ a {
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   .logo {
     float: none;
   }
@@ -494,6 +502,10 @@ nav {
   width: 60%;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   nav {
     width: 100%;
       background-color: rgba(255, 255, 255, 0.93);
@@ -508,12 +520,16 @@ nav ul {
   float: right;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   nav ul {
     padding-top: 10px;
     margin-bottom: 22px;
     float: left;
     text-align: center;
-    width: 100%;
+    width: 90%;
 
   }
 }
@@ -523,9 +539,13 @@ nav ul li {
   line-height: 1.5;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   nav ul li {
     width: 100%;
-    padding: 7px 0;
+    /*padding: 7px 0;*/
     margin: 0;
   }
 }
@@ -548,6 +568,10 @@ nav ul a {
   transition: all 200ms ease-in;
 }
 @media only screen and (max-width: 766px) {
+  .parallax pre{
+    font-size: 10px;
+    left:0px;
+  }
   .mobile-toggle {
     display: block;
   }
@@ -684,5 +708,19 @@ p {
     -webkit-transform: translateY(20px);
     -ms-transform: translateY(20px);
     transform: translateY(20px);
+  }
+}
+@media only screen and (max-width:766px){
+  .parallax:nth-of-type(1) pre {
+    padding: 5px;
+    text-align: center;
+  }
+  .parallax:nth-of-type(3) pre {
+    padding: 5px;
+    text-align: left;
+  }
+  .parallax:nth-of-type(4) pre {
+    padding: 10px;
+    text-align: center;
   }
 }
