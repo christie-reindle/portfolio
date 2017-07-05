@@ -718,17 +718,37 @@ p {
   }
 }
 @media only screen and (max-width:766px){
+  .parallax:nth-of-type(1) {
+    background: url(https://github.com/creindle/portfolio/blob/master/assets/image1-small.png?raw=true);
+    /*background: url(/assets/image1.png);*/
+    background-color: black;
+  }
   .parallax:nth-of-type(1) pre {
     white-space:pre-wrap;
     font-size: 9px;
     padding: 5px;
     text-align: center;
   }
+  .parallax:nth-of-type(2) {
+    background: url(https://github.com/creindle/portfolio/blob/master/assets/taurus-reverse-small.png?raw=true);
+    /*background: url(/assets/image1.png);*/
+    background-color: black;
+  }
+  .parallax:nth-of-type(3) {
+    background: url(https://github.com/creindle/portfolio/blob/master/assets/parallax-3-leo-small.png?raw=true);
+    /*background: url(/assets/image1.png);*/
+    background-color: black;
+  }
   .parallax:nth-of-type(3) pre {
     white-space:pre-wrap;
     font-size: 9px;
     padding: 5px;
     text-align: left;
+  }
+  .parallax:nth-of-type(4) {
+    background: url(https://github.com/creindle/portfolio/blob/master/assets/parallax-4-small.png?raw=true);
+    /*background: url(/assets/image1.png);*/
+    background-color: black;
   }
   .parallax:nth-of-type(4) pre {
     white-space:pre-wrap;
