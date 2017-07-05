@@ -732,7 +732,7 @@ p {
   .parallax:nth-of-type(2) {
     background: url(https://github.com/creindle/portfolio/blob/master/assets/taurus-reverse-small.png?raw=true);
     /*background: url(/assets/image1.png);*/
-    background-color: black;
+    background-color: #2E4053;
   }
   .parallax:nth-of-type(3) {
     background: url(https://github.com/creindle/portfolio/blob/master/assets/parallax-3-leo-small.png?raw=true);
@@ -748,7 +748,7 @@ p {
   .parallax:nth-of-type(4) {
     background: url(https://github.com/creindle/portfolio/blob/master/assets/parallax-4-small.png?raw=true);
     /*background: url(/assets/image1.png);*/
-    background-color: black;
+    background-color: #2E4053;
   }
   .parallax:nth-of-type(4) pre {
     white-space:pre-wrap;
