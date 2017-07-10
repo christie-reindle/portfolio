@@ -89,10 +89,31 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
-.swiper-slide {
+/*.swiper-slide {
+  background: url(images/bg.jpg) no-repeat center center fixed; 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+}*/
+.swiper-slide:nth-of-type(1) {
+  background: url(https://github.com/creindle/portfolio/blob/master/assets/styles-for-hue.png?raw=true); 
+  background-size: cover;
+  background-position: top;
+}
+.swiper-slide:nth-of-type(2) {
+  background: url(https://github.com/creindle/portfolio/blob/master/assets/sounds-of-the-sea.png?raw=true); 
+  background-size: cover;
+  background-position: top;
+}
+.swiper-slide:nth-of-type(3) {
+  background: url(https://github.com/creindle/testing-1/blob/master/assets/word-garden.png?raw=true); 
+  background-size: cover;
+  background-position: center;
+}
+.swiper-slide:nth-of-type(4) {
+  background: url(https://github.com/creindle/portfolio/blob/master/assets/devleague-for-homeless.png?raw=true); 
+  background-size: cover;
+  background-position: top;
 }
 .gallery-top {
     height: 80%;
