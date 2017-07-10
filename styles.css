@@ -496,3 +496,44 @@ p {
         text-align: center;
     }
 }
+
+/*Image text overlay*/
+.half {
+  transition: background-size ease-in-out 1s;
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+.half span {
+  transition: opacity ease-in-out .3s;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 11px;
+  font-style: italic;
+  padding: 25% 10px;
+  display: block;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+}
+.half:hover:before {
+  opacity: 1;
+}
+.half:hover span {
+  opacity: 1;
+}
+.half:before {
+  content: "";
+  transition: opacity ease-in-out 1s;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(40, 40, 40, 0.85);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
