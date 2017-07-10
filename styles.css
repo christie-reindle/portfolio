@@ -578,8 +578,8 @@ p {
 /*Fancy Button*/
 
 .draw-border {
-  box-shadow: inset 0 0 0 4px #58afd1;
-  color: #58afd1;
+  box-shadow: inset 0 0 0 4px #007aff;
+  color: #007aff;
   -webkit-transition: color 0.25s 0.08333s;
   transition: color 0.25s 0.08333s;
   position: relative;
