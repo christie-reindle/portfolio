@@ -583,10 +583,10 @@ p {
   border-right-width: 4px;
 }
 .draw-border:hover {
-  color: #ffe593;
+  color: white;
 }
 .draw-border:hover::before, .draw-border:hover::after {
-  border-color: #ffe593;
+  border-color: white;
   -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
