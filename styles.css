@@ -545,8 +545,9 @@ p {
   font-size: 30px;
   font-weight: 400;
   /*font-style: italic;*/
-  padding: 2rem;
-  display: block;
+  padding: 15%;
+  /*display: block;*/
+  display: inline-block;
   position: relative;
   color: white;
   text-transform: uppercase;
@@ -645,8 +646,9 @@ p {
         font-size: 14px;
         font-weight: 400;
         height: 100%;
-        margin: 1%;
-        display: block;
+        /*margin: 1%;*/
+        padding: 10%;
+        display: inline-block;
         /*position: relative;*/
         color: white;
         text-transform: uppercase;
