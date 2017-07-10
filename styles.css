@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Yantramanav');
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
 /*PARALLAX*/
 
 header {
@@ -160,11 +167,12 @@ a {
 }
 /* RESPONSIVE */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 766px) {
     .parallax pre {
         font-size: 10px;
         padding: 5px;
     }
+
 }
 /* Social Media Icons */
 
@@ -509,17 +517,25 @@ p {
   text-align: center;
 }
 .half span {
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: 'Amatic SC';
   transition: opacity ease-in-out .3s;
   opacity: 0;
+  font-size: 30px;
   font-weight: 400;
-  font-size: 11px;
-  font-style: italic;
-  padding: 25% 10px;
+  /*font-style: italic;*/
+  padding: 15%;
   display: block;
   position: relative;
   color: white;
   text-transform: uppercase;
 }
+
+.half span::first-line{
+  font-size: 50px;
+  font-style: bold;
+}
+
 .half:hover:before {
   opacity: 1;
 }
@@ -536,4 +552,25 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
+}
+@media only screen and (max-width: 766px){
+  .half span {
+        /*font-family: 'Amatic SC', cursive;*/
+        font-family: 'Amatic SC';
+        transition: opacity ease-in-out .3s;
+        opacity: 0;
+        font-size: 18px;
+        font-weight: 400;
+        /*font-style: italic;*/
+        padding: 20%;
+        display: block;
+        position: relative;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .half span::first-line{
+        font-size: 33px;
+        font-style: bold;
+      }
 }
