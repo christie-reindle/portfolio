@@ -43,164 +43,164 @@ window.addEventListener("scroll", function() {
 });
 
 
-/* Nav Bar */
+// /* Nav Bar */
 
 
-(function($) {
+// (function($) {
 
-    // DOM Ready Function
-    $(function() {
-        Carousel.init();
-    });
+//     // DOM Ready Function
+//     $(function() {
+//         Carousel.init();
+//     });
 
-    Carousel = {
-        init: function() {
-            // Common jQuery Elements
-            this.$container = $('.carousel');
-            this.$triggerNext = this.$container.find('.js-carousel-nav_next');
-            this.$triggerPrev = this.$container.find('.js-carousel-nav_prev');
-            this.$carousel = $('.carousel-list');
-            this.$carouselListItem = this.$carousel.find('li');
-            this.$carouselListItemFirst = this.$carousel.find('li:first');
-            this.$carouselListItemLast = this.$carousel.find('li:last');
-            this.$carouselItem = $('.carousel-item');
-            this.$selectedItem = this.$carousel.find('.carousel-item_isSelected');
+//     Carousel = {
+//         init: function() {
+//             // Common jQuery Elements
+//             this.$container = $('.carousel');
+//             this.$triggerNext = this.$container.find('.js-carousel-nav_next');
+//             this.$triggerPrev = this.$container.find('.js-carousel-nav_prev');
+//             this.$carousel = $('.carousel-list');
+//             this.$carouselListItem = this.$carousel.find('li');
+//             this.$carouselListItemFirst = this.$carousel.find('li:first');
+//             this.$carouselListItemLast = this.$carousel.find('li:last');
+//             this.$carouselItem = $('.carousel-item');
+//             this.$selectedItem = this.$carousel.find('.carousel-item_isSelected');
 
-            // Common Markers/Placeholders
-            this.marker = this.$selectedItem.index();
-            this.paddedMarker = this.$selectedItem.index() + 1;
-            this.viewportWidth = this.$carouselItem.width();
-            this.carouselItemLength = this.$carouselItem.length;
-            this.theEnd = this.carouselItemLength - 1;
+//             // Common Markers/Placeholders
+//             this.marker = this.$selectedItem.index();
+//             this.paddedMarker = this.$selectedItem.index() + 1;
+//             this.viewportWidth = this.$carouselItem.width();
+//             this.carouselItemLength = this.$carouselItem.length;
+//             this.theEnd = this.carouselItemLength - 1;
 
-            // Initiate Functions
-            this.bulletNav();
-            this.bindEvents();
-            //this.autoPlay();
-        },
+//             // Initiate Functions
+//             this.bulletNav();
+//             this.bindEvents();
+//             //this.autoPlay();
+//         },
 
-        bindEvents: function() {
-            var self = this;
-            var $triggerBullet = this.$container.find('.js-carousel-bulletNav-control');
-            //var indexBullet = $triggerBullet.index();
+//         bindEvents: function() {
+//             var self = this;
+//             var $triggerBullet = this.$container.find('.js-carousel-bulletNav-control');
+//             //var indexBullet = $triggerBullet.index();
 
-            this.$triggerNext.on('click', function(e) {
-                e.preventDefault();
-                self.nextSlide();
-            });
+//             this.$triggerNext.on('click', function(e) {
+//                 e.preventDefault();
+//                 self.nextSlide();
+//             });
 
-            this.$triggerPrev.on('click', function(e) {
-                e.preventDefault();
-                self.prevSlide();
-            });
+//             this.$triggerPrev.on('click', function(e) {
+//                 e.preventDefault();
+//                 self.prevSlide();
+//             });
 
-            $triggerBullet.on('click', function(e, i) {
-                var $this = $(this);
-                var i = $this.index();
+//             $triggerBullet.on('click', function(e, i) {
+//                 var $this = $(this);
+//                 var i = $this.index();
 
-                e.preventDefault();
-                self.bulletNavControl(i);
-            });
-        },
+//                 e.preventDefault();
+//                 self.bulletNavControl(i);
+//             });
+//         },
 
-        //Return the value to slide container by
-        slideBy: function() {
-            var slideBy = (this.viewportWidth * -this.marker) + 'px';
+//         //Return the value to slide container by
+//         slideBy: function() {
+//             var slideBy = (this.viewportWidth * -this.marker) + 'px';
 
-            return slideBy;
-        },
+//             return slideBy;
+//         },
 
-        updateMarkerNext: function() {
-            var $currentActive = this.$carousel.find('.carousel-item_isSelected');
+//         updateMarkerNext: function() {
+//             var $currentActive = this.$carousel.find('.carousel-item_isSelected');
 
-            $currentActive.removeClass('carousel-item_isSelected');
-            $currentActive.next().addClass('carousel-item_isSelected');
-        },
+//             $currentActive.removeClass('carousel-item_isSelected');
+//             $currentActive.next().addClass('carousel-item_isSelected');
+//         },
 
-        updateMarkerPrev: function() {
-            var $currentActive = this.$carousel.find('.carousel-item_isSelected');
+//         updateMarkerPrev: function() {
+//             var $currentActive = this.$carousel.find('.carousel-item_isSelected');
 
-            $currentActive.removeClass('carousel-item_isSelected');
-            $currentActive.prev().addClass('carousel-item_isSelected');
-        },
+//             $currentActive.removeClass('carousel-item_isSelected');
+//             $currentActive.prev().addClass('carousel-item_isSelected');
+//         },
 
-        updateMarkerToFirst: function() {
-            this.$carouselListItemLast.removeClass('carousel-item_isSelected');
-            this.$carouselListItemFirst.addClass('carousel-item_isSelected');
-        },
+//         updateMarkerToFirst: function() {
+//             this.$carouselListItemLast.removeClass('carousel-item_isSelected');
+//             this.$carouselListItemFirst.addClass('carousel-item_isSelected');
+//         },
 
-        updateMarkerToLast: function() {
-            this.$carouselListItemFirst.removeClass('carousel-item_isSelected');
-            this.$carouselListItemLast.addClass('carousel-item_isSelected');
-        },
+//         updateMarkerToLast: function() {
+//             this.$carouselListItemFirst.removeClass('carousel-item_isSelected');
+//             this.$carouselListItemLast.addClass('carousel-item_isSelected');
+//         },
 
-        incrementSlide: function() {
-            if (this.marker < this.carouselItemLength) {
-                this.marker++;
-            } else {
-                this.marker = 1;
-            }
-        },
+//         incrementSlide: function() {
+//             if (this.marker < this.carouselItemLength) {
+//                 this.marker++;
+//             } else {
+//                 this.marker = 1;
+//             }
+//         },
 
-        decrementSlide: function() {
-            if (this.marker == 0 ) {
-                this.marker = this.theEnd;
-            } else {
-                this.marker--;
-            }
-        },
+//         decrementSlide: function() {
+//             if (this.marker == 0 ) {
+//                 this.marker = this.theEnd;
+//             } else {
+//                 this.marker--;
+//             }
+//         },
 
-        // Go to next slide
-        nextSlide: function() {
-            this.incrementSlide();
+//         // Go to next slide
+//         nextSlide: function() {
+//             this.incrementSlide();
 
-            if (this.marker < this.carouselItemLength) {
-                this.updateMarkerNext();
-                this.$carousel.css('margin-left', this.slideBy());
-            } else {
-                this.updateMarkerToFirst();
-                this.$carousel.css('margin-left', 0);
-            }
-        },
+//             if (this.marker < this.carouselItemLength) {
+//                 this.updateMarkerNext();
+//                 this.$carousel.css('margin-left', this.slideBy());
+//             } else {
+//                 this.updateMarkerToFirst();
+//                 this.$carousel.css('margin-left', 0);
+//             }
+//         },
 
-        // Go to previous slide
-        prevSlide: function() {
-            this.decrementSlide();
+//         // Go to previous slide
+//         prevSlide: function() {
+//             this.decrementSlide();
 
-            if (this.marker == this.theEnd) {
-                this.updateMarkerToLast();
-                this.$carousel.css('margin-left', this.slideBy());
-            } else {
-                this.updateMarkerPrev();
-                this.$carousel.css('margin-left', this.slideBy());
-            }
+//             if (this.marker == this.theEnd) {
+//                 this.updateMarkerToLast();
+//                 this.$carousel.css('margin-left', this.slideBy());
+//             } else {
+//                 this.updateMarkerPrev();
+//                 this.$carousel.css('margin-left', this.slideBy());
+//             }
             
-        },
+//         },
 
-        bulletNav: function() {
-            var $bulletNav = $('.carousel-bulletNav');
+//         bulletNav: function() {
+//             var $bulletNav = $('.carousel-bulletNav');
 
-            for(i = 0; i < this.carouselItemLength; i++) {
-                $bulletNav.append('<li class="carousel-bulletNav-control js-carousel-bulletNav-control"><a></a></li>');
-            }
-        },
+//             for(i = 0; i < this.carouselItemLength; i++) {
+//                 $bulletNav.append('<li class="carousel-bulletNav-control js-carousel-bulletNav-control"><a></a></li>');
+//             }
+//         },
 
-        updateMarkerBullet: function(index) {
-            var $currentActive = this.$carousel.find('.carousel-item_isSelected');
+//         updateMarkerBullet: function(index) {
+//             var $currentActive = this.$carousel.find('.carousel-item_isSelected');
 
-            $currentActive.removeClass('carousel-item_isSelected');
-            this.$carouselItem.eq(index).addClass('carousel-item_isSelected');
-        },
+//             $currentActive.removeClass('carousel-item_isSelected');
+//             this.$carouselItem.eq(index).addClass('carousel-item_isSelected');
+//         },
 
-        bulletNavControl: function(index) {
-            var slideByBullet = (this.viewportWidth * -index) + 'px';
+//         bulletNavControl: function(index) {
+//             var slideByBullet = (this.viewportWidth * -index) + 'px';
 
-            this.$carousel.css('margin-left', slideByBullet);
-            this.updateMarkerBullet(index);
-            this.marker = index;
-        }
-    }
-}(jQuery));
+//             this.$carousel.css('margin-left', slideByBullet);
+//             this.updateMarkerBullet(index);
+//             this.marker = index;
+//         }
+//     }
+// }(jQuery));
 
 var username = "creindle";
 var hostname = "gmail.com";
@@ -244,6 +244,12 @@ $('nav a').click(function(event) {
     event.preventDefault();
 });
 
-
-
+/* Swiper */
+var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
 
